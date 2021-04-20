@@ -1,0 +1,11 @@
+<%- include('partials/header.ejs') %>
+
+<h1>Member list</h1>
+<% for(let i=0;i<member.length; i++){ %>
+    <li><%= member[i].name + "codename" + member[i].codename%></li>
+<%}%>
+<hr>
+<% member.forEach(function(mem){ %> // easy forloop
+    <li><%= mem.name + "codename" + mem.codename%></li>
+<%}); %>
+<%- include('partials/footer.ejs') %>
