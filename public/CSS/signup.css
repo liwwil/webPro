@@ -1,0 +1,36 @@
+.Wbox{
+  width:50%;          
+}
+.WLname{
+   width: 165px;
+}
+.Bbox{
+   width:300px;
+}
+.signUpbtn{
+   background-color: rgb(247, 149, 165);
+   color: white;
+   padding: 16px 20px;
+   border: none;
+   cursor: pointer;
+   opacity: 0.8;
+   width: 100px;
+   border-radius: 10px;
+   
+
+}
+.container
+{border-style: outset;
+padding: 5px 5px 5px 5px ;
+width: 24%;
+margin-top: 5%;
+border: 2px solid rgb(247, 149, 165);
+border-radius: 10px;
+
+}
+
+.Email , .Username , .Password{
+   border: 2px solid rgba(206, 205, 205, 0.897);
+   border-radius: 5px;
+   width:50%;    
+}

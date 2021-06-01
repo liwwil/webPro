@@ -1,0 +1,146 @@
+.WebLogo{
+  height: 150px;
+  font-size: 36px;
+  font-weight: bold;
+  color: white;
+  /* margin-top: 2%; */
+  margin-left: 46%;
+  padding-top: 2%;
+  margin-bottom: 5px;
+  
+}
+
+/* .logo{
+  width:6rem;
+  height: auto;
+  text-align: center;
+  display: inline;
+  margin-left: auto;
+  margin-right: auto;
+  position:absolute;
+  margin-left: -100px;  
+  margin-top: 10px;
+} */
+
+.desclogo{
+  border: 3px solid white;
+  box-sizing:content-box;
+  width: 120px;
+  padding: 0px 0px 0px 0px;
+  text-align: center;
+
+}
+
+.desctwo{
+  border: 3px solid white;
+  box-sizing:content-box;
+  background-color: white;
+  color: rgb(255, 100, 126);
+  padding: 0;
+  margin-bottom: -2px;
+ 
+}
+  
+  .header {
+    text-align: center;
+    background-color:rgb(247, 149, 165);
+    font-family:'Times New Roman', Times, serif;
+  }
+  *{
+    margin: 0;
+    padding: 0;
+  }
+
+
+  .LOGO1 {
+    color: white;
+    font-size: 30px;
+    font-family:'Times New Roman', Times, serif;
+    font-weight: bold;
+  
+
+  }
+  .LOGO2 {
+    color: white;
+    font-size: 30px;
+    font-family:'Times New Roman', Times, serif;
+    font-weight: bold;
+    margin-top: 5px;
+
+  }
+  .navBar1 {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    background-color: rgb(247, 149, 165);
+    font-family:'Times New Roman', Times, serif;
+  }
+  .navBar2{
+    display: inline;
+    font-family:'Times New Roman', Times, serif;
+  }
+  
+  .navBar2 a, .dropbtn {
+    display: inline-block;
+    color: white;
+    text-align: center;
+    padding: 14px 16px;
+    font-size: 17px;
+    font-family:'Times New Roman', Times, serif;
+   
+    
+  }
+  
+  .navBar2 a:hover, .dropdown:hover .dropbtn {
+    background-color: rgb(255, 100, 126);
+    color: white;
+    font-family:'Times New Roman', Times, serif;
+  }
+  
+  li.dropdown {
+    display: inline-block;
+    font-family:'Times New Roman', Times, serif;
+  }
+  
+  .dropdown-content {
+    display: none;
+    position: fixed;
+    background-color: #f9f9f9;
+    min-width: 160px;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    z-index: 1;
+    font-family:'Times New Roman', Times, serif;
+  }
+  
+  .dropdown-content a {
+    color:rgb(247, 149, 165);;
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+    text-align: left;
+    font-family:'Times New Roman', Times, serif;
+    
+    
+  }
+  
+  .dropdown-content a:hover {
+    background-color: rgb(247, 149, 165);
+    color : white;
+    font-family:'Times New Roman', Times, serif;
+    
+  }
+  
+  .dropdown:hover .dropdown-content {
+    display: block;
+    font-family:'Times New Roman', Times, serif;
+  }
+
+ 
+  /* .signIn-signUp{
+      position: static;
+      margin-left:90%;
+      margin-top: -150px;
+      color :white;
+  } */
+  

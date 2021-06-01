@@ -1,0 +1,48 @@
+#Title2{
+    color: rgb(247, 149, 165);
+    margin-top: 3%;
+    text-align: center;
+    font-weight: bold;
+   
+}
+
+div.ComingSoon{
+    width: 25%;
+    margin: 1%;
+    float: left;
+    margin: 1.5% 0 3% 5%;
+    display: inline;
+}
+
+div.ComingSoon img {
+    max-width: 50%;
+    height: auto;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    
+}
+
+div.Showingdesc2 {
+    margin-top: 10px;
+    padding: 10px;
+    text-align: center;
+    background-color:  rgb(247, 149, 165);
+    border-radius:25px;
+    color: white;
+    width: 300px;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    
+}
+
+.releaseDate{
+    color :black;
+    font-size: 12px;
+    margin: 10px;
+}
+
+  div.NowShowing :hover{
+   opacity: 0.6;
+}

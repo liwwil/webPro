@@ -1,0 +1,257 @@
+
+
+
+.boxOffice{
+    font-size: 30px;
+    font-weight: bolder;
+    text-align: center;
+    margin-top: 3%;
+    color:  rgb(247, 149, 165);
+}
+
+.BoxofficeGallery{
+ 
+   width: 60%;
+   margin-left: auto;
+   margin-right: auto;
+   display: block;
+
+}
+div.gallery {
+    /* margin: 5px; */
+    border: 3px solid rgb(247, 149, 165);
+    float: left;
+    width: 16%;
+    margin-top: 1%;
+    margin-left: 4%;
+    
+    
+ }
+  
+  
+  div.gallery:hover {
+    border: 5px solid rgb(247, 149, 165);
+    
+  }
+  
+  div.gallery img {
+    width: 100%;
+    height: auto;
+    border-bottom: 4px solid rgb(247, 149, 165);
+ 
+  }
+  
+  div.desc {
+    margin-top: 200px;
+    padding: 2px 4px ;
+    text-align: center;
+  }
+  .numberBoxoffice{
+    color:white;
+    background-color: rgb(247, 149, 165);
+    font-weight: bold;
+    border : 2.5px solid rgb(247, 149, 165);
+    border-radius: 25px;
+    text-align: center;
+    width: 25%;
+    display: block;
+    margin-top: -230px;
+    /* margin-left: auto;
+    margin-right: auto; */
+    margin-left: -20px;
+    position: relative;
+    margin-bottom: none;
+    font-size: 20px;
+  }
+  /* .PromotionContainer{
+    width: 50%;
+    display: inline;
+    margin-left: auto;
+    margin-right: auto;
+
+  } */
+  .promotionSP{
+    font-size: 30px;
+    font-weight: bolder;
+    text-align: center;
+    margin-top: 26%;
+    clear: both;
+    color:  rgb(247, 149, 165);
+  }
+
+  .SPM1{
+    float: left;
+    background-color:lightpink;
+    width:400px;
+    text-align: center;
+    color:white;
+    padding: 5px;
+    margin: 1.5% 0 0 7.5%;
+
+    
+  }
+  .SPM2{
+    float: left;
+    background-color:lightpink;
+    width:400px;
+    text-align: center;
+    color:white;
+    margin: 2% 0 0 3%;
+    padding: 5px;
+    text-align: center;
+  }
+  .SPM3{
+    float: left;
+    background-color:lightpink;
+    width:400px;
+    text-align: center;
+    color:white;
+    margin: 2% 0 0 3%;
+    padding: 5px;
+    text-align: center;
+
+  }
+  .SPM4{
+    clear: both;
+    float: left;
+    background-color:lightpink;
+    width:400px;
+    text-align: center;
+    color:white;
+    margin: 2% 0 0 7.5%;
+    padding: 5px;
+    text-align: center;
+
+  }
+  .SPM5{
+    float: left;
+    background-color:lightpink;
+    width:400px;
+    text-align: center;
+    color:white;
+    margin: 2% 0 0 3%;
+    padding: 5px;
+    text-align: center;
+
+  }
+  .SPM6{
+    float: left;
+    background-color:lightpink;
+    width:400px;
+    text-align: center;
+    color:white;
+    margin: 1.5% 0 0 3%;
+    padding: 5px;
+    text-align: center;
+    
+   
+  }
+
+  .MoreOption{
+    float: right;
+    border-radius: 4px;
+    background-color: rgb(247, 149, 165);
+    border: none;
+    color: #FFFFFF;
+    text-align: center;
+    padding: 10px;
+    width: 100px;
+    transition: all 0.5s;
+    cursor: pointer;
+    margin: 20px;
+    margin-right: 10%;
+ 
+  }
+  .MoreOption a {
+    cursor: pointer;
+    display: inline-block;
+    position: relative;
+    transition: 0.5s;
+  }
+  .MoreOption a:after {
+  content: '\00bb';
+  position: absolute;
+  opacity: 0;
+  top: 0;
+  right: -20px;
+  transition: 0.5s;
+
+}
+
+.MoreOption:hover a {
+  padding-right: 25px;
+  
+}
+
+.MoreOption:hover a:after {
+  opacity: 1;
+  right: 0;
+}
+  
+  .NewActivity{
+    clear: both;
+    margin-top: 5%;
+    font-size: 30px;
+    font-weight: bolder;
+    text-align: center;
+    color:  rgb(247, 149, 165);
+    
+  }
+
+  .NEWS1{
+    border : 3px solid   rgb(247, 149, 165);
+    width: 80%;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 3%;
+    padding-left: 2%;
+    padding-right: 2%;
+    padding-top: 2%;
+    padding-bottom: 4%;
+    height: auto;
+
+  }
+  .imgNews1{
+    float: left;
+    padding-right: 2%;
+    
+ 
+  }
+  /* .Text{
+    padding-left: 2%;
+    padding-right: 2%;
+    padding-top: 2%;
+    padding-bottom: 2%;
+    
+  } */
+  .TitleNews{
+    text-align: center;
+
+  }
+  .NEWS2{
+    border : 3px solid   rgb(247, 149, 165);
+    width: 80%;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 3%;
+    margin-top: 2%;
+    padding-left: 2%;
+    padding-right: 2%;
+    padding-top: 2%;
+    padding-bottom: 4%;
+    height: auto;
+
+  }
+  .imgNews2{
+    float: right;
+    padding-left: 2%;
+  }
+  
+  div.NEWS1:hover {
+    background-color:rgb(247, 149, 165); opacity: 0.6;
+  }
+  div.NEWS2:hover {
+    background-color:rgb(247, 149, 165); opacity: 0.6;
+  }
+  
+  
