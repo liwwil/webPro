@@ -48,27 +48,27 @@ app.get('/', function(req,res){
 
 app.get('/Movie', function(req,res){
      NowShowing.find({},function(err,allnowshowing){
-             if(err){
-                     console.log(err);
+            if(err){
+                      console.log(err);
 
-             }else{
-                res.render('Movie.ejs',{NowShowing: allnowshowing});
-             }
-     });
+           }else{
+               res.render('Movie.ejs',{NowShowing: allnowshowing});
+            }
+   });
 });
 
 app.post('/Movie', function(req,res){
-        var name= req.body.name;
-        var image= req.body.image;
-        var desc= req.body.desc;
-        var newShowing ={name:name, image:image, desc:desc};
-        NowShowing.create(newShowing,function(err,newlyShowing){
-                if(err){
-                        console.log(err);
-                }else{
-                        res.redirect("/Movie");
-                }
-        });
+        // var name= req.body.name;
+        // var image= req.body.image;
+        // var desc= req.body.desc;
+        // var newShowing ={name:name, image:image, desc:desc};
+        // NowShowing.create(newShowing,function(err,newlyShowing){
+        //         if(err){
+        //                 console.log(err);
+        //         }else{
+        //                 res.redirect("/Movie");
+        //         }
+        // });
 });
 app.get('/Movie/ComingSoon', function(req,res){
         res.render('ComingSoon');
@@ -99,6 +99,9 @@ app.get('/Movie/ContentMovie', function(req,res){
         res.render('ContentMovie.ejs');
 });
 
+app.get('/signIn', function(req,res){
+        res.render('sign-in.ejs');
+});
 
 app.get('/signUp', function(req,res){
         res.render('sign-up.ejs');
