@@ -2,9 +2,9 @@
   height: 150px;
   font-size: 36px;
   font-weight: bold;
-  color: white;
+  color: rgb(255, 100, 126);
   /* margin-top: 2%; */
-  margin-left: 46%;
+  margin-left: 40%;
   padding-top: 2%;
   margin-bottom: 5px;
   
@@ -23,21 +23,23 @@
 } */
 
 .desclogo{
-  border: 3px solid white;
   box-sizing:content-box;
-  width: 120px;
+  width: 300px;
   padding: 0px 0px 0px 0px;
   text-align: center;
+  font-size: 36;
 
 }
 
 .desctwo{
-  border: 3px solid white;
+
   box-sizing:content-box;
   background-color: white;
   color: rgb(255, 100, 126);
   padding: 0;
-  margin-bottom: -2px;
+  margin-bottom: -5%;
+  margin-top: -10;
+  font-size: 36;
  
 }
   
@@ -143,4 +145,8 @@
       margin-top: -150px;
       color :white;
   } */
+
+  .material-icons.md-48 { 
+    font-size: 24px; 
+  }
   
