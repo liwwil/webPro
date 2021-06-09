@@ -15,12 +15,14 @@
                 <div class="form">
                     <h1>Sign In</h1>
                     <p>Welcome Back! Enjoy the Movies</p>
-                    <form action="">
-                        <label><input type="text" placeholder="Email" class="email" /></label>
-                        <label><input type="password" placeholder="Password" class="password" /></label>
-                        <label><input type="submit" value="Create Account" /></label>
+                    <form action="/signIn" method='POST'>
+                        <label><input type="text" placeholder="Email" name="email" class="email" /></label> 
+                        <label><input type="password" placeholder="Password" name="password" class="password" /></label>
+                        <label><input type="submit" value="Sign In" /></label>
                     </form>
+                    <a href="/forgotPassword" style="margin-bottom: -10px;font-size: 12px;margin-left: auto;margin-right: auto;display:block;">Forgot your password?</a>
                 </div>
+                <h6 style="color: white;">Don't have an account?<a href="/signUp"><span class="createAccount">Create Account</span></a></h6>
             </div>
         </div>
     </div>

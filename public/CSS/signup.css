@@ -106,6 +106,12 @@ html, body, div, form, input, label, ul, li, h1, h2, p{
  .signup input.email{
     background: url(https://res.cloudinary.com/fazurrehman/image/upload/v1485168692/dailyui/email.png) left 10px center no-repeat;
  }
+
+ .signup input.username{
+
+   background: url(https://i.dlpng.com/static/png/6824333_preview.png);
+
+ }
  
  .signup input.password{
     background: url(https://res.cloudinary.com/fazurrehman/image/upload/v1485168692/dailyui/password.png) left 5px center no-repeat;
