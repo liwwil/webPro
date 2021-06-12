@@ -8,10 +8,13 @@
     <link rel="stylesheet" href="/CSS/signup.css">
 </head>
 <body>
+    <div id="fb-root"></div>
+    <script async defer crossorigin="anonymous" src="https://connect.facebook.net/en_US/sdk.js#xfbml=1&version=v11.0" nonce="6jCpUI3X"></script>
     <div class="main">
         <div class="container">
             <div class="signup">
                 <div class="form">
+                    <div class="fb-login-button" data-width="" data-size="large" data-button-type="continue_with" data-layout="default" data-auto-logout-link="false" data-use-continue-as="false"></div>
                     <h1>Sign up</h1>
                     <p>Create your account for get a good deal.</p>
                     <form action="/signUp" method='POST'>

@@ -5,13 +5,39 @@ const express = require('express');/*เรียก module express*/
         LocalStrategy = require('passport-local'),
         User  = require('./models/user');
 
-
-
 const app = express();
 mongoose.connect('mongodb://localhost/Movieweb');
 app.use(express.static('public')); //ห้ามลบ เดะ css หายยย
 app.set('view engine', 'ejs');
 app.use(bodyparser.urlencoded({ extended : true}));
+var collectionSchema = new mongoose.Schema({
+        name: String,
+        image: String,
+        date: Date
+        
+});
+
+var Collection = mongoose.model('Collection', collectionSchema);
+// Collection.create(
+//         {
+//                 name: "Python",
+//                 image: "https://i.pinimg.com/736x/ae/27/ac/ae27ac6de908f1b75dbee92a7ed0ddbb.jpg",
+//                 desc: "19/06/2021"
+
+//        },
+//        function(err, collection){
+//                 if(err){
+//                         console.log(err);
+//                 }
+//                 else{
+//                         console.log('New Data Added.');
+//                         console.log(collection);
+//                 }
+
+//        }
+// );
+
+
 
 
 app.use(require('express-session')({
@@ -41,10 +67,30 @@ app.get('/', function(req,res){
     res.render('home.ejs');
 });
 
+
 app.get('/Movie', function(req,res){
-        res.render('Movie.ejs');
+        Collection.find({},function(err,allCollections){
+                if(err){
+                        console.log(err);
+                }else{
+                        res.render("Movie.ejs",{collections: allCollections});
+                }
+        });
 });
 
+app.post('/Movie', function(req,res){
+        var name = req.body.name;
+        var image = req.body.image;
+        var date = req.body.date; 
+        var newCollection = { name:name , image: image, date:date};
+        Collection.create(newCollection, function(err,newlyCreated){
+                if(err){
+                        console.log(err);
+                }else{
+                        res.redirect('/Movie');
+                }
+        });
+});
 
 app.get('/Movie/ComingSoon', function(req,res){
         res.render('ComingSoon.ejs');
@@ -116,8 +162,12 @@ app.post('/signUp' , function(req, res){
     });
 
 /* Admin part */
-app.get('/Management', function(req,res){
-        res.render('Management.ejs');
+app.get('/NewShowingCard', function(req,res){
+        res.render('NewShowingCard.ejs');
+});
+
+app.get('/Admin', function(req,res){
+        res.render('Admin.ejs');
 });
 
 
