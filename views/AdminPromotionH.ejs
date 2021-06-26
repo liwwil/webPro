@@ -1,0 +1,69 @@
+<%- include('partials/sidebar.ejs') %>
+
+<div class="card-body"width="100%">
+    <h4 style="font-size: 24px; color:#fa5f98;">Box Office</h4>
+    <table class="table-sortable" width="80%" >
+        <thead>
+          <tr class="TitleTable">
+            <th>Rank</th>
+            <th>Name</th>
+            <th>Age</th>
+            <th>Occupation</th>
+            <th width="50px">Action</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>1</td>
+            <td>Dom</td>
+            <td>35</td>
+            <td>Web Developer</td>
+          </tr>
+          <tr>
+            <td>2</td>
+            <td>Aebecca</td>
+            <td>29</td>
+            <td>Teacher</td>
+          </tr>
+       </tbody>  
+</div>
+</div>
+</div>
+</div>
+<script>function sortTableByColumn(table, column, asc = true) {
+const dirModifier = asc ? 1 : -1;
+const tBody = table.tBodies[0];
+const rows = Array.from(tBody.querySelectorAll("tr"));
+
+// Sort each row
+const sortedRows = rows.sort((a, b) => {
+const aColText = a.querySelector(`td:nth-child(${ column + 1 })`).textContent.trim();
+const bColText = b.querySelector(`td:nth-child(${ column + 1 })`).textContent.trim();
+
+return aColText > bColText ? (1 * dirModifier) : (-1 * dirModifier);
+});
+
+// Remove all existing TRs from the table
+while (tBody.firstChild) {
+tBody.removeChild(tBody.firstChild);
+}
+
+// Re-add the newly sorted rows
+tBody.append(...sortedRows);
+
+// Remember how the column is currently sorted
+table.querySelectorAll("th").forEach(th => th.classList.remove("th-sort-asc", "th-sort-desc"));
+table.querySelector(`th:nth-child(${ column + 1})`).classList.toggle("th-sort-asc", asc);
+table.querySelector(`th:nth-child(${ column + 1})`).classList.toggle("th-sort-desc", !asc);
+}
+
+document.querySelectorAll(".table-sortable th").forEach(headerCell => {
+headerCell.addEventListener("click", () => {
+const tableElement = headerCell.parentElement.parentElement.parentElement;
+const headerIndex = Array.prototype.indexOf.call(headerCell.parentElement.children, headerCell);
+const currentIsAscending = headerCell.classList.contains("th-sort-asc");
+
+sortTableByColumn(tableElement, headerIndex, !currentIsAscending);
+});
+});
+</script>

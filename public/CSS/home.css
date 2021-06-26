@@ -1,6 +1,27 @@
 
 
+* {
+  box-sizing: border-box;
+}
 
+.responsive {
+  padding: 0 6px;
+  float: left;
+  width: 24.99999%;
+}
+
+@media only screen and (max-width: 700px) {
+  .responsive {
+    width: 49.99999%;
+    margin: 6px 0;
+  }
+}
+
+@media only screen and (max-width: 500px) {
+  .responsive {
+    width: 100%;
+  }
+}
 .boxOffice{
     font-size: 30px;
     font-weight: bolder;
@@ -11,7 +32,7 @@
 
 .BoxofficeGallery{
  
-   width: 60%;
+   width: 100%;
    margin-left: auto;
    margin-right: auto;
    display: block;
@@ -21,13 +42,12 @@ div.gallery {
     /* margin: 5px; */
     border: 3px solid rgb(247, 149, 165);
     float: left;
-    width: 16%;
+    width: 15%;
     margin-top: 1%;
     margin-left: 4%;
     
     
  }
-  
   
   div.gallery:hover {
     border: 5px solid rgb(247, 149, 165);
@@ -46,22 +66,95 @@ div.gallery {
     padding: 2px 4px ;
     text-align: center;
   }
-  .numberBoxoffice{
+  .numberBoxoffice1{
     color:white;
     background-color: rgb(247, 149, 165);
     font-weight: bold;
     border : 2.5px solid rgb(247, 149, 165);
     border-radius: 25px;
-    text-align: center;
     width: 25%;
     display: block;
-    margin-top: -230px;
+    margin-top: -300px;
     /* margin-left: auto;
     margin-right: auto; */
     margin-left: -20px;
     position: relative;
     margin-bottom: none;
     font-size: 20px;
+  }
+  .numberBoxoffice2{
+    color:white;
+    background-color: rgb(247, 149, 165);
+    font-weight: bold;
+    border : 2.5px solid rgb(247, 149, 165);
+    border-radius: 25px;
+    width: 25%;
+    display: block;
+    margin-top: -300px;
+    /* margin-left: auto;
+    margin-right: auto; */
+    margin-left: -20px;
+    position: relative;
+    margin-bottom: none;
+    font-size: 20px;
+  }
+  .numberBoxoffice3{
+    color:white;
+    background-color: rgb(247, 149, 165);
+    font-weight: bold;
+    border : 2.5px solid rgb(247, 149, 165);
+    border-radius: 25px;
+    width: 25%;
+    display: block;
+    margin-top: -300px;
+    /* margin-left: auto;
+    margin-right: auto; */
+    margin-left: -20px;
+    position: relative;
+    margin-bottom: none;
+    font-size: 20px;
+  }
+  .numberBoxoffice4{
+    color:white;
+    background-color: rgb(247, 149, 165);
+    font-weight: bold;
+    border : 2.5px solid rgb(247, 149, 165);
+    border-radius: 25px;
+    width: 25%;
+    display: block;
+    margin-top: -300px;
+    /* margin-left: auto;
+    margin-right: auto; */
+    margin-left: -20px;
+    position: relative;
+    margin-bottom: none;
+    font-size: 20px;
+  }
+  
+  .numberBoxoffice5{
+    color:white;
+    background-color: rgb(247, 149, 165);
+    font-weight: bold;
+    border : 2.5px solid rgb(247, 149, 165);
+    border-radius: 25px;
+    width: 25%;
+    display: block;
+    margin-top: -300px;
+    /* margin-left: auto;
+    margin-right: auto; */
+    margin-left: -20px;
+    position: relative;
+    margin-bottom: none;
+    font-size: 20px;
+  }
+  
+  
+  
+
+  .desc{
+    position: sticky;
+    padding: -10px;
+
   }
   /* .PromotionContainer{
     width: 50%;
@@ -81,7 +174,7 @@ div.gallery {
 
   .SPM1{
     float: left;
-    /* background-color:lightpink; */
+    background-color:lightpink;
     width:400px;
     text-align: center;
     color:white;
@@ -92,7 +185,7 @@ div.gallery {
   }
   .SPM2{
     float: left;
-    /* background-color:lightpink; */
+    background-color:lightpink;
     width:400px;
     text-align: center;
     color:white;
@@ -102,7 +195,7 @@ div.gallery {
   }
   .SPM3{
     float: left;
-    /* background-color:lightpink; */
+    background-color:lightpink;
     width:400px;
     text-align: center;
     color:white;
@@ -114,7 +207,7 @@ div.gallery {
   .SPM4{
     clear: both;
     float: left;
-    /* background-color:lightpink; */
+    background-color:lightpink;
     width:400px;
     text-align: center;
     color:white;
@@ -125,7 +218,7 @@ div.gallery {
   }
   .SPM5{
     float: left;
-    /* background-color:lightpink; */
+    background-color:lightpink;
     width:400px;
     text-align: center;
     color:white;
@@ -136,7 +229,7 @@ div.gallery {
   }
   .SPM6{
     float: left;
-    /* background-color:lightpink; */
+    background-color:lightpink;
     width:400px;
     text-align: center;
     color:white;

@@ -3,7 +3,8 @@ const express = require('express');/*เรียก module express*/
         mongoose =require('mongoose'),
         passport = require('passport'),
         LocalStrategy = require('passport-local'),
-        User  = require('./models/user');
+        User  = require('./models/user'),
+        moment = require('moment');
 
 const app = express();
 mongoose.connect('mongodb://localhost/Movieweb');
@@ -13,31 +14,13 @@ app.use(bodyparser.urlencoded({ extended : true}));
 var collectionSchema = new mongoose.Schema({
         name: String,
         image: String,
-        date: Date
+        date: Date,
+        category:String,
+        desc:String
         
 });
 
 var Collection = mongoose.model('Collection', collectionSchema);
-// Collection.create(
-//         {
-//                 name: "Python",
-//                 image: "https://i.pinimg.com/736x/ae/27/ac/ae27ac6de908f1b75dbee92a7ed0ddbb.jpg",
-//                 desc: "19/06/2021"
-
-//        },
-//        function(err, collection){
-//                 if(err){
-//                         console.log(err);
-//                 }
-//                 else{
-//                         console.log('New Data Added.');
-//                         console.log(collection);
-//                 }
-
-//        }
-// );
-
-
 
 
 app.use(require('express-session')({
@@ -78,11 +61,23 @@ app.get('/Movie', function(req,res){
         });
 });
 
+app.get('/TicketMovie/:id', function(req, res){
+        Collection.findById(req.params.id, function(err, foundCollection){
+                if(err){
+                      console.log(err);
+                }else {
+                        res.render('TicketMovie.ejs',{collections: foundCollection});
+                }
+        });
+    });
+
 app.post('/Movie', function(req,res){
         var name = req.body.name;
         var image = req.body.image;
-        var date = req.body.date; 
-        var newCollection = { name:name , image: image, date:date};
+        var date = req.body.date;
+        var category = req.body.category;
+        var desc = req.body.desc;
+        var newCollection = { name:name , image: image,category:category,date:date,desc:desc};
         Collection.create(newCollection, function(err,newlyCreated){
                 if(err){
                         console.log(err);
@@ -93,6 +88,10 @@ app.post('/Movie', function(req,res){
 });
 
 app.get('/Movie/ComingSoon', function(req,res){
+        res.render('ComingSoon.ejs');
+});
+
+app.post('/Movie/ComingSoon', function(req,res){
         res.render('ComingSoon.ejs');
 });
 
@@ -117,8 +116,8 @@ app.get('/ContentNews', function(req,res){
         res.render('ContentNews.ejs');
 });
 
-app.get('/Movie/ContentMovie', function(req,res){
-        res.render('ContentMovie.ejs');
+app.get('/Movie/TicketMovie', function(req,res){
+        res.render('TicketMovie.ejs');
 });
 
 app.get('/signIn', function(req,res){
@@ -170,6 +169,41 @@ app.get('/Admin', function(req,res){
         res.render('Admin.ejs');
 });
 
+app.get('/Admin/Boxoffice',function(req,res){
+        res.render('AdminBoxoffice.ejs');
+});
+
+app.get('/Admin/PromotionH',function(req,res){
+        res.render('AdminPromotionH.ejs');
+});
+
+app.get('/Admin/News',function(req,res){
+        res.render('AdminNews.ejs');
+});
+
+app.get('/Admin/NowShowing',function(req,res){
+      
+        Collection.find({},function(err,allCollections){
+                if(err){
+                        console.log(err);
+                }else{
+                        res.render('AdminShowing.ejs',{collections: allCollections});
+                }
+        });
+        
+});
+
+app.get('/Admin/comingSoon',function(req,res){
+        res.render('Admincomingsoon.ejs');
+});
+
+app.get('/Admin/Theater',function(req,res){
+        res.render('theateradmin.ejs');
+});
+
+app.get('/Admin/Promotion',function(req,res){
+        res.render('AdminPro.ejs');
+});
 
 app.listen('3000',function(req,res){
     console.log('Server is running on')});

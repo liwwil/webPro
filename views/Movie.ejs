@@ -1,25 +1,52 @@
 <%- include('partials/header.ejs') %>
+<% collections.forEach(function(collection){ %>
+<!-- <a href='/ContentMovie/<%= collection._id%>'class="btn btn-outline-secondary">view</a> -->
 
-<div class="album py-5 bg-light">
-    <div class="container">
-      <div class="row row-cols-1 row-cols-sm-2 row-cols-md-3 g-3">
-        <% collections.forEach(function(collection){ %>
-        <div class="col">
-            <div class="card shadow-sm">
-                <img src="<%= collection.image %>" class="card-img-top" width="100%">
-                <div class="card-body">
-                    <h4 class="card-title"><%= collection.name %> </h4>
-                    <p class="card-text"><%= collection.date %></p>
-                    </div>
-                </div>
-            </div>
-        <% }); %>
-        
-       </div>
-     </div>
+<div class="modal" tabindex="-1">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title">Modal title</h5>
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+      </div>
+      <div class="modal-body">
+        <p>Modal body text goes here.</p>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+        <button type="button" class="btn btn-primary">Save changes</button>
+      </div>
     </div>
+  </div>
 </div>
+<div class="card_container" data-offset="2">
+    <div class="pg">
+      <img src="<%= collection.image %>">
+    </div>
+    <div class="card">
+      <div class="shine"></div>
+      <div class="text-block">
+        <h1 style="text-decoration: none;"><%= collection.name %></h1></div>
+        <h3><%= collection.category %></h3>
+        <p>Release Date:<%= moment(collection.date).format('DD-MM-YYYY') %></p>
+        <p>
+          <%= collection.desc %>
+        </p>
+        <a href='/TicketMovie/<%= collection._id%>'><button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#exampleModal" style="width: 200px;margin-left: 200px;">
+           <i class="las la-ticket-alt"></i>Get Ticket  
+         </button>
+        </a>
+
+      </div>
+     
+    </div>
+  </div>
+  <% }); %>
+
+  
+  
+
+
 
  
 
-<%- include('partials/footer.ejs') %>
