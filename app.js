@@ -20,7 +20,19 @@ var collectionSchema = new mongoose.Schema({
         
 });
 
+var ticketSchema = new mongoose.Schema({
+        moviename : String,
+        movieimg : String,
+        moviedate : Date,
+        moviecategory : String,
+        theater : String,
+        seatnumber : String,
+        time :  Date
+
+});
+
 var Collection = mongoose.model('Collection', collectionSchema);
+var Ticket = mongoose.model('Ticket',ticketSchema)
 
 
 app.use(require('express-session')({
@@ -87,8 +99,28 @@ app.post('/Movie', function(req,res){
         });
 });
 
+app.post('/Movie', function(req,res){
+        var name = req.body.name;
+        var image = req.body.image;
+        var date = req.body.date;
+        var category = req.body.category;
+        var desc = req.body.desc;
+        var newCollection = { name:name , image: image,category:category,date:date,desc:desc};
+        Collection.create(newCollection, function(err,newlyCreated){
+                if(err){
+                        console.log(err);
+                }else{
+                        res.redirect('/Movie');
+                }
+        });
+});
+
 app.get('/Movie/ComingSoon', function(req,res){
         res.render('ComingSoon.ejs');
+});
+
+app.get('/TicketComplete', function(req,res){
+        res.render('ticket.ejs');
 });
 
 app.post('/Movie/ComingSoon', function(req,res){

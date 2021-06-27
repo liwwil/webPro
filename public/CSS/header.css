@@ -23,16 +23,15 @@
     margin: 0;
     padding: 0;
   }
-
+.title{
+  padding-top: 60px;
+}
 
  
-  .navBar1 {
-    list-style-type: none;
-    margin: 0;
-    padding: 0;
-    overflow: hidden;
-    background-color: rgb(247, 149, 165);
+  #head-nav.bg-dark, #head-nav.navbar-dark {
+    background-color: rgb(247, 149, 165)!important;
     font-family: 'Poppins', sans-serif;
+    font-size: 14pt ;
   }
   .navBar2{
     display: inline;
@@ -118,3 +117,10 @@
     color: rgb(247, 149, 165);
     font-weight: bold;
   }
+#sign-in.btn-danger {
+  color: #fff;
+  background-color: rgb(247, 149, 165);
+  border-color: rgb(247, 149, 165);
+  float: right;
+  margin: 10px 10px 0px 0px;
+}

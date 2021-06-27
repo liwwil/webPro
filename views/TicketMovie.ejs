@@ -1,5 +1,102 @@
-<%- include('partials/header.ejs') %>
-<h1><%= collections.name %></h1>
-<img src="<%= collections.image %>">
-<p><%= collections.desc %></p>
-<%- include('partials/footer.ejs') %>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Booking Ticket</title>
+    <!-- <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css"> -->
+    <style>
+        body{
+            background-image: url("https://images.unsplash.com/photo-1610890690846-5149750c8634?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=751&q=80");
+        }
+    .signup-form{
+    height:500px;
+    width:600px;
+    margin-top:5%;
+    margin-left:auto;
+    margin-right:auto;
+    border: 3px solid rgb(252, 133, 152);
+    box-sizing: content-box;
+    background-color: rgb(252, 133, 152);
+}
+.Signup-head{
+    padding:8px;
+}
+
+.signup-content2 .input{
+    width:400px;
+    padding:10px;
+    margin:10px;
+    color:#fff;
+}
+.signup-content2 .tarikh{
+    margin:10px;
+    padding:10px;
+    color:#fff;
+}
+.signup-content2  .person{
+    padding:10px;
+    margin:10px;
+    color:#fff;
+}
+.signup-content2 .travel{
+    margin:20px 20px;
+}
+.signup-content2 .travel2{
+    padding:5px;
+}
+.signup-content2 .submit-btn{
+    border:none;
+    outline:none;
+    width:200px;
+    padding:10px;
+    margin-left:200px;
+}
+    </style>
+</head>
+<body>
+    <form action='/TicketComplete' method="POST">
+
+        <div class="signup-form bg-dark">
+
+            <div class="Signup-head bg-warning">
+                <h1>Get Ticket</h1>
+            </div>
+            <div class="signup-content2">
+                <h5>Movie Name :</h5>
+                <select style="margin-top: -10px;" class="form-select" aria-label="Default select example">
+                    <option selected>Chooose Movie</option>
+                    <option value="1">Resident Evil3</option>
+                    <option value="2">Resident Evil5</option>
+                    <option value="3">Resident Evil6</option>
+                  </select>
+            
+
+            <label class="text-white" style="margin-left:10px;">Date</label>
+            <input type="date" class="tarikh bg-dark text-white">
+            <label class="text-white" style="margin-left:10px;">Return</label>
+            <input type="date" class="tarikh bg-dark">
+
+            <input type="number" class="bg-dark person" placeholder="Adults">
+            <input type="number" class="bg-dark person" placeholder="Children"><br>
+
+            <label class="text-white travel">Travel Class</label>
+            <select class="bg-dark text-white travel2">
+                <option></option>
+                <option>First Class/1A</option>
+                <option>AC 2tier/2A</option>
+                <option>AC 3tier/3A</option>
+                <option>Executive class chair car/Economy Class</option>
+                <option>AC Chair Car</option>
+                <option>Sleeper Class</option>
+                <option>Second Class</option>
+                <option>General</option>
+            </select>
+
+            <input type="submit" value="submit" class="submit-btn bg-warning"> 
+        </div>
+        </div>
+    </form>
+</body>
+</html>
