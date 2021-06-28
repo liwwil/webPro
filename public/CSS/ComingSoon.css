@@ -46,3 +46,7 @@ div.Showingdesc2 {
   div.NowShowing :hover{
    opacity: 0.6;
 }
+
+#cs-card.card{
+    background-color: #fff !important;
+}

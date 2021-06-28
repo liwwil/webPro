@@ -45,8 +45,6 @@ div.gallery {
     width: 15%;
     margin-top: 1%;
     margin-left: 4%;
-    
-    
  }
   
   div.gallery:hover {
@@ -57,7 +55,7 @@ div.gallery {
   div.gallery img {
     width: 100%;
     height: auto;
-    border-bottom: 4px solid rgb(247, 149, 165);
+    border-bottom: 4px solid rgb(243, 226, 74);
  
   }
   
@@ -68,67 +66,54 @@ div.gallery {
   }
   .numberBoxoffice1{
     color:white;
-    background-color: rgb(247, 149, 165);
+    background-color: rgb(255, 210, 86);
     font-weight: bold;
     border : 2.5px solid rgb(247, 149, 165);
     border-radius: 25px;
-    width: 25%;
+    width: 50px;
     display: block;
-    margin-top: -300px;
-    /* margin-left: auto;
-    margin-right: auto; */
-    margin-left: -20px;
-    position: relative;
+    position: sticky;
     margin-bottom: none;
     font-size: 20px;
+    text-align: center;
   }
   .numberBoxoffice2{
     color:white;
-    background-color: rgb(247, 149, 165);
+    background-color: rgba(151, 146, 117, 0.979);
     font-weight: bold;
     border : 2.5px solid rgb(247, 149, 165);
     border-radius: 25px;
-    width: 25%;
+    width: 50px;
     display: block;
-    margin-top: -300px;
-    /* margin-left: auto;
-    margin-right: auto; */
-    margin-left: -20px;
-    position: relative;
-    margin-bottom: none;
+    position: sticky;
     font-size: 20px;
+    text-align: center;
   }
   .numberBoxoffice3{
     color:white;
-    background-color: rgb(247, 149, 165);
+    background-color: rgb(179, 95, 56);
     font-weight: bold;
     border : 2.5px solid rgb(247, 149, 165);
     border-radius: 25px;
-    width: 25%;
+    width: 50px;
     display: block;
-    margin-top: -300px;
-    /* margin-left: auto;
-    margin-right: auto; */
-    margin-left: -20px;
-    position: relative;
+    position: sticky;
     margin-bottom: none;
     font-size: 20px;
+    text-align: center;
   }
   .numberBoxoffice4{
     color:white;
-    background-color: rgb(247, 149, 165);
+    background-color: rgb(247, 64, 94);
     font-weight: bold;
     border : 2.5px solid rgb(247, 149, 165);
     border-radius: 25px;
-    width: 25%;
+    width: 50px;
     display: block;
-    margin-top: -300px;
-    /* margin-left: auto;
-    margin-right: auto; */
-    margin-left: -20px;
-    position: relative;
+    position: sticky;
     margin-bottom: none;
     font-size: 20px;
+    text-align: center;
   }
   
   .numberBoxoffice5{
@@ -137,16 +122,25 @@ div.gallery {
     font-weight: bold;
     border : 2.5px solid rgb(247, 149, 165);
     border-radius: 25px;
-    width: 25%;
+    width: 50px;
     display: block;
-    margin-top: -300px;
-    /* margin-left: auto;
-    margin-right: auto; */
-    margin-left: -20px;
-    position: relative;
-    margin-bottom: none;
+    position: sticky;
     font-size: 20px;
   }
+
+  #home.card {
+    color: #fff;
+    padding: 30px;
+    width: 100% !important;
+    height: 100%;
+    border-width: 10px;
+    border: 5px solid #fff !important;
+    background-color: rgb(247, 149, 165)!important;
+}
+
+.card h3{
+  text-decoration: none;
+}
   
   
   
@@ -167,7 +161,6 @@ div.gallery {
     font-size: 30px;
     font-weight: bolder;
     text-align: center;
-    margin-top: 26%;
     clear: both;
     color:  rgb(247, 149, 165);
   }

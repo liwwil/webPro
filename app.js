@@ -22,12 +22,9 @@ var collectionSchema = new mongoose.Schema({
 
 var ticketSchema = new mongoose.Schema({
         moviename : String,
-        movieimg : String,
         moviedate : Date,
-        moviecategory : String,
         theater : String,
-        seatnumber : String,
-        time :  Date
+        seatnumber : String
 
 });
 
@@ -83,6 +80,8 @@ app.get('/TicketMovie/:id', function(req, res){
         });
     });
 
+
+
 app.post('/Movie', function(req,res){
         var name = req.body.name;
         var image = req.body.image;
@@ -99,18 +98,27 @@ app.post('/Movie', function(req,res){
         });
 });
 
-app.post('/Movie', function(req,res){
-        var name = req.body.name;
-        var image = req.body.image;
-        var date = req.body.date;
-        var category = req.body.category;
-        var desc = req.body.desc;
-        var newCollection = { name:name , image: image,category:category,date:date,desc:desc};
-        Collection.create(newCollection, function(err,newlyCreated){
+app.get('/TicketComplete', function(req,res){
+        Ticket.find({},function(err,allTicket){
                 if(err){
                         console.log(err);
                 }else{
-                        res.redirect('/Movie');
+                        res.render("ticket.ejs",{tickets: allTicket});
+                }
+        });
+});
+
+app.post('/Movie/TicketMovie', function(req,res){
+        var moviename = req.body.moviename;
+        var moviedate = req.body.moviedate;
+        var theater = req.body.theater;
+        var seatnumber = req.body.seatnumber;
+        var newTicket = { moviename:moviename ,moviedate:moviedate,theater:theater,seatnumber:seatnumber};
+        Ticket.create(newTicket, function(err,newlyCreated){
+                if(err){
+                        console.log(err);
+                }else{
+                        res.redirect('/TicketComplete');
                 }
         });
 });

@@ -29,23 +29,20 @@
   </div>
 </div>
 <% collections.forEach(function(collection){ %>
-<div class="card_container" data-offset="2">
-    <div class="pg">
-      <img src="<%= collection.image %>">
-    </div>
-    <div class="card">
-      <div class="shine"></div>
-      <div class="text-block">
-        <h1 style="text-decoration: none;"><%= collection.name %></h1></div>
-        <h3><%= collection.category %></h3>
-        <p>Release Date:<%= moment(collection.date).format('DD-MM-YYYY') %></p>
-        <p>
-          <%= collection.desc %>
-        </p>
+  <div id="movie-card" class="card mb-3" style="max-width: 80%; margin-left: 12%;">
+    <div class="row g-0">
+      <div class="col-md-4">
+        <img src="<%= collection.image %>" style="max-width: 60%;">
       </div>
-     
+      <div class="col-md-8">
+        <div class="card-body">
+          <h1><%= collection.name %></h1></div>
+          <h3><%= collection.category %></h3>
+          <p>Release Date:<%= moment(collection.date).format('DD-MM-YYYY') %></p>
+          <p><%= collection.desc %></p>
+        </div>
+      </div>
     </div>
-  </div>
   <% }); %>
 
   

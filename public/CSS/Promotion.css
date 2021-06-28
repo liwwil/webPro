@@ -7,6 +7,9 @@
     color:  rgb(247, 149, 165);
  
 }
+#promotion-card.card{
+    background-color: #fff !important;
+}
 
 .card-deck{
     width: 70%;
@@ -18,10 +21,6 @@
 .card img{
     width: 100%;
     height: 80%;
-}
-
-.card{
-    width: 25%;
 }
 
 .card-title{
@@ -63,14 +62,14 @@
     position :absolute;
     
 }
-
+/* 
 .container{
-    position: absolute;
+    position: relative;
     bottom:0;
     left: 0;
     right: 0;
     padding-bottom: 50px;
-}
+} */
 
 
 .overlay-image{

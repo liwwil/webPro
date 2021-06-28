@@ -28,11 +28,21 @@
 }
 
  
-  #head-nav.bg-dark, #head-nav.navbar-dark {
-    background-color: rgb(247, 149, 165)!important;
-    font-family: 'Poppins', sans-serif;
-    font-size: 14pt ;
-  }
+#head-nav.bg-dark, #head-nav.navbar-dark {
+  background-color: rgb(247, 149, 165)!important;
+  font-family: 'Poppins', sans-serif;
+  font-size: 14pt ;
+  justify-content: center;
+}
+#movie.dropdown-menu {
+  background-color: rgb(247, 149, 165);
+  border: 0px;
+}
+#movie.dropdown-item {
+  color: #fff;
+  background-color: rgb(247, 149, 165);
+
+}
   .navBar2{
     display: inline;
     font-family: 'Poppins', sans-serif;
